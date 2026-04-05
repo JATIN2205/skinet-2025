@@ -8,7 +8,14 @@
   "projects": {
     "client": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "type": "component"
+        },
+        "@schematics/angular:service": {
+          "type": "service"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -54,9 +61,6 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-           "options": {
-            "ssl": true
-          },
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
